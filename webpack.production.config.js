@@ -19,7 +19,7 @@ module.exports = {
     entry: './src/standalone.js',
     output: {
         path: __dirname + '/dist',
-        filename: 'standalone.js',
+        filename: 'standalone.min.js',
         library: 'standalone',
         libraryTarget: 'commonjs2'
     },
