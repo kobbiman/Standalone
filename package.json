@@ -4,7 +4,7 @@
   "description": "Create framework agnostic components that are truly reusable and interoperable with all the benefits of the React ecosystem – using the HTML5 custom elements API to extend HTML's vocabulary.",
   "main": "dist/standalone.js",
   "scripts": {
-    "build": "webpack && npm run dev",
+    "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress && npm run dev",
     "test": "ava tests/*.test.js --tap | tap-nyan",
     "dev": "webpack --config webpack-dev.config.js",
     "cleanup": "rimraf node_modules"
@@ -56,6 +56,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.7.2",
     "bower": "^1.7.9",
+    "del": "^2.2.2",
     "document-register-element": "^0.5.4",
     "express": "^4.13.4",
     "humps": "^1.0.0",
@@ -63,7 +64,9 @@
     "moment": "^2.12.0",
     "rimraf": "^2.5.2",
     "tap-nyan": "0.0.2",
-    "webpack": "^1.12.15"
+    "webpack": "^1.12.15",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-transform-object-assign": "^6.5.0"
   },
   "dependencies": {
     "humps": "^1.0.0",
