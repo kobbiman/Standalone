@@ -21,7 +21,7 @@ module.exports = {
         path: __dirname + '/dist',
         filename: 'standalone.min.js',
         library: 'standalone',
-        libraryTarget: 'commonjs2'
+        libraryTarget: 'var'
     },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
